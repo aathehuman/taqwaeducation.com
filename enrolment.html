@@ -1,4 +1,292 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Enrolment | Taqwa Education</title><meta name="description" content="Send an enrolment enquiry to Taqwa Education in Birmingham."><link rel="icon" href="assets/favicon.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/taqwa-education-logo.jpg" alt="Taqwa Education"></a><button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Tuition</a><a class="active" href="enrolment.html">Enrolment</a><a href="contact.html">Contact</a></nav><a class="btn btn-small nav-cta" href="enrolment.html">Enrol Now</a></div></header>
-<main><section class="page-hero"><div class="container"><span class="eyebrow">Enrolment</span><h1>Tell us about <span>your child.</span></h1><p>Complete the short form and send your enquiry directly to the Taqwa Education team.</p></div></section><section class="section"><div class="container enrol-grid"><div><h2>Weekend tuition at YMC.</h2><div class="info-stack"><div><strong>Class days</strong><span>Saturday &amp; Sunday</span></div><div><strong>Time</strong><span>11:00 AM – 1:00 PM</span></div><div><strong>Session</strong><span>£20 per 2-hour session</span></div><div><strong>Location</strong><span>YMC Building, 49 Stoney Lane, Birmingham B25 8RE</span></div></div></div><form id="enrolForm" class="form-card" name="taqwa-enrolment" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="taqwa-enrolment"><input type="hidden" name="subject" data-remove-prefix value="New Taqwa Education enrolment enquiry"><p class="honeypot"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p><div class="field-row"><label>Parent / Guardian Name<input required name="parent" type="text" autocomplete="name"></label><label>Email Address<input required name="email" type="email" autocomplete="email"></label></div><div class="field-row"><label>Phone Number<input required name="phone" type="tel" autocomplete="tel"></label><label>Child's Name<input required name="child" type="text"></label></div><div class="field-row"><label>Child's Year Group<select required name="year"><option value="">Select year group</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Year 6</option><option>KS3</option><option>GCSE</option><option>A Level</option></select></label><label>Tuition Required<select required name="service"><option value="">Select service</option><option>English</option><option>Maths</option><option>Science</option><option>English, Maths &amp; Science</option><option>Grammar School Preparation</option><option>KS2 SATs Preparation</option></select></label></div><div class="field-row"><label>Preferred Attendance<select name="attendance"><option>1 day per week</option><option>2 days per week</option></select></label><label>Preferred Day<select name="day"><option>Saturday</option><option>Sunday</option><option>Either day</option><option>Both days</option></select></label></div><label>Anything we should know?<textarea name="message" rows="5" placeholder="Optional"></textarea></label><button class="btn full" type="submit">Send Enrolment Enquiry</button><p class="form-note">Your details are submitted through Netlify Forms. The team can reply directly to the email address you provide.</p><div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden><strong>JazakAllahu khayran — your enquiry has been sent.</strong><span>The Taqwa Education team can now review your details and get back to you.</span></div><div class="form-error" id="formError" role="alert" hidden><strong>We couldn’t send that just now.</strong><span>Please try again, or call 07846 252413.</span></div></form></div></section></main>
-<footer><div class="container footer-wrap"><img src="assets/taqwa-education-logo.jpg" alt="Taqwa Education"><div><p>© <span id="year"></span> Taqwa Education. All rights reserved.</p><p class="footer-tagline">Learn <b>|</b> Grow <b>|</b> Succeed</p></div></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrolment &amp; Enquiry | Taqwa Education Birmingham</title>
+  <meta name="description" content="Start your enrolment or send an enquiry to Taqwa Education. Tell us about your child and our team will get back to you. Weekend tuition at the YMC Building, Birmingham.">
+  <link rel="canonical" href="https://taqwaeducation.co.uk/enrolment.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Enrolment &amp; Enquiry | Taqwa Education">
+  <meta property="og:description" content="Submit an enrolment enquiry for weekend tuition at Taqwa Education, Birmingham.">
+  <meta property="og:url" content="https://taqwaeducation.co.uk/enrolment.html">
+  <meta property="og:image" content="https://taqwaeducation.co.uk/assets/taqwa-education-logo.jpg">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Taqwa Education home">
+        <img src="assets/taqwa-education-logo.jpg" alt="Taqwa Education">
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Tuition</a>
+        <a href="enrolment.html" class="active">Enrolment</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:07846252413" class="nav-phone" aria-label="Call 07846 252413">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          07846 252413
+        </a>
+        <a href="enrolment.html" class="btn btn-primary">Enrol Now</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+        <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Tuition</a>
+    <a href="enrolment.html" class="active">Enrolment</a>
+    <a href="contact.html">Contact</a>
+    <a href="enrolment.html" class="btn btn-primary btn-block">Enrol Now</a>
+    <div class="mobile-contact">
+      <a href="tel:07846252413">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        07846 252413
+      </a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Enrolment</span>
+        <h1>Tell us about your child.</h1>
+        <p class="lead">
+          Submit an enrolment enquiry below and the Taqwa Education team will review your details
+          and get back to you. The more we know, the better we can help.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container" style="max-width:880px;">
+
+        <div class="form-card">
+
+          <form
+            name="taqwa-enrolment"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/?submitted=true"
+            aria-label="Enrolment enquiry form">
+
+            <!-- Netlify hidden fields -->
+            <input type="hidden" name="form-name" value="taqwa-enrolment">
+
+            <!-- Honeypot -->
+            <div class="bot-field" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </div>
+
+            <div class="form-row form-row-1">
+              <div class="form-field">
+                <label for="parentName">Parent / Guardian Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="parentName" name="parentName" required autocomplete="name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="07XXX XXX XXX">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="childName">Child's Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="childName" name="childName" required>
+              </div>
+              <div class="form-field">
+                <label for="yearGroup">Child's Year Group <span class="req" aria-hidden="true">*</span></label>
+                <select id="yearGroup" name="yearGroup" required>
+                  <option value="" disabled selected>Select year group</option>
+                  <option value="Year 1">Year 1</option>
+                  <option value="Year 2">Year 2</option>
+                  <option value="Year 3">Year 3</option>
+                  <option value="Year 4">Year 4</option>
+                  <option value="Year 5">Year 5</option>
+                  <option value="Year 6">Year 6</option>
+                  <option value="KS3">KS3</option>
+                  <option value="GCSE">GCSE</option>
+                  <option value="A Level">A Level</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row form-row-1">
+              <div class="form-field">
+                <label for="tuitionRequired">Tuition Required <span class="req" aria-hidden="true">*</span></label>
+                <select id="tuitionRequired" name="tuitionRequired" required>
+                  <option value="" disabled selected>Select tuition</option>
+                  <option value="English">English</option>
+                  <option value="Maths">Maths</option>
+                  <option value="Science">Science</option>
+                  <option value="English, Maths & Science">English, Maths &amp; Science</option>
+                  <option value="Grammar School Preparation">Grammar School Preparation</option>
+                  <option value="KS2 SATs Preparation">KS2 SATs Preparation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row form-row-1">
+              <fieldset class="form-field" style="border:none; padding:0;">
+                <legend style="font-size:0.88rem; font-weight:600; color:var(--text-dark); margin-bottom:0.45rem;">
+                  Preferred Attendance <span class="req" aria-hidden="true">*</span>
+                </legend>
+                <div class="radio-group" role="radiogroup" aria-label="Preferred attendance">
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="1 day per week" required>
+                    <span>1 day per week</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="2 days per week" required>
+                    <span>2 days per week</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-row form-row-1">
+              <fieldset class="form-field" style="border:none; padding:0;">
+                <legend style="font-size:0.88rem; font-weight:600; color:var(--text-dark); margin-bottom:0.45rem;">
+                  Preferred Day <span class="req" aria-hidden="true">*</span>
+                </legend>
+                <div class="radio-group" role="radiogroup" aria-label="Preferred day">
+                  <label class="radio-pill">
+                    <input type="radio" name="preferredDay" value="Saturday" required>
+                    <span>Saturday</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="preferredDay" value="Sunday" required>
+                    <span>Sunday</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="preferredDay" value="Either day" required>
+                    <span>Either day</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="preferredDay" value="Both days" required>
+                    <span>Both days</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-row form-row-1">
+              <div class="form-field">
+                <label for="notes">Anything we should know?</label>
+                <textarea id="notes" name="notes" placeholder="Share any details that may help us support your child — current topics, areas of difficulty, exam timings, etc."></textarea>
+              </div>
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">
+                I agree that Taqwa Education may contact me about this enquiry using the details I've provided.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send Enquiry</button>
+
+          </form>
+
+          <!-- Status messages -->
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+
+          <!-- Alternative contact -->
+          <div class="form-alt">
+            <p>Prefer to speak with us first? Call the team directly.</p>
+            <div class="phones">
+              <a href="tel:07846252413">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                07846 252413 — Admin
+              </a>
+              <a href="tel:07727082205">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                07727 082205 — Curriculum
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/taqwa-education-logo.jpg" alt="Taqwa Education">
+          <p class="tagline">Learn | Grow | Succeed</p>
+          <p>Birmingham-based tuition centre operating from the Yardley Muslim Centre (YMC) Building.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Tuition</a></li>
+            <li><a href="enrolment.html">Enrolment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:07846252413" class="phone-link">07846 252413</a> — Admin</li>
+            <li><a href="tel:07727082205" class="phone-link">07727 082205</a> — Curriculum</li>
+            <li>YMC Building</li>
+            <li>49 Stoney Lane, Birmingham B25 8RE</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Class Times</h4>
+          <ul>
+            <li>Saturday &amp; Sunday</li>
+            <li>11:00 AM – 1:00 PM</li>
+            <li>£20 per 2-hour session</li>
+            <li>£75 / month (1 day)</li>
+            <li>£150 / month (2 days)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2024</span> Taqwa Education. Operating from the YMC Building, Birmingham.</p>
+        <p>Learn | Grow | Succeed</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
