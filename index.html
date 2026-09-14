@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -48,7 +48,7 @@
           </div>
         </div>
         <aside class="hero-card" aria-label="Tuition information">
-          <div class="hero-card-icon">🎓</div>
+          <div class="hero-card-icon">EDU</div>
           <h2>Weekend Tuition Centre</h2>
           <p class="muted">Every Saturday & Sunday</p>
           <div class="time">11:00 AM – 1:00 PM</div>
@@ -57,6 +57,55 @@
           <div class="price-line"><span>1 day/week monthly</span><strong>£75</strong></div>
           <div class="price-line"><span>2 days/week monthly</span><strong>£150</strong></div>
         </aside>
+      </div>
+    </section>
+
+    <section class="promo-section" aria-label="Current programmes and adverts">
+      <div class="container">
+        <div class="promo-head">
+          <div>
+            <span class="eyebrow">At YMC</span>
+            <h2>Classes, programmes & opportunities</h2>
+          </div>
+          <span class="promo-status">Updates can be added here anytime</span>
+        </div>
+        <div class="promo-slider" id="promoSlider">
+          <div class="promo-slide is-active">
+            <div class="promo-copy">
+              <span class="promo-kicker">Weekend Tuition</span>
+              <h3>Build strong foundations. Prepare for what’s next.</h3>
+              <p>English, Maths, Science, Grammar School preparation, KS2 SATs and more.</p>
+              <a class="btn btn-small" href="#enrolment">Enquire about tuition</a>
+            </div>
+            <div class="promo-art tuition-art" aria-hidden="true"><span>TAQWA<br>EDUCATION</span></div>
+          </div>
+          <div class="promo-slide">
+            <div class="promo-copy">
+              <span class="promo-kicker">Karate Classes</span>
+              <h3>Stay active. Build discipline. Grow in confidence.</h3>
+              <p>See the latest class details and timings at the YMC building.</p>
+              <a class="btn btn-small btn-secondary" href="https://ymc1.uk/events.html">View YMC programmes</a>
+            </div>
+            <div class="promo-art karate-art" aria-hidden="true"><span>KARATE<br>AT YMC</span></div>
+          </div>
+          <div class="promo-slide">
+            <div class="promo-copy">
+              <span class="promo-kicker">Community Programmes</span>
+              <h3>More happening at your local community centre.</h3>
+              <p>Tuition, youth activities, sports and community programmes under one roof.</p>
+              <a class="btn btn-small btn-secondary" href="https://ymc1.uk/events.html">See programmes</a>
+            </div>
+            <div class="promo-art community-art" aria-hidden="true"><span>YM C<br>PROGRAMMES</span></div>
+          </div>
+          <button class="promo-control promo-prev" type="button" aria-label="Previous advert">‹</button>
+          <button class="promo-control promo-next" type="button" aria-label="Next advert">›</button>
+          <div class="promo-dots" aria-label="Advert slides">
+            <button class="is-active" type="button" data-slide="0" aria-label="Show advert 1"></button>
+            <button type="button" data-slide="1" aria-label="Show advert 2"></button>
+            <button type="button" data-slide="2" aria-label="Show advert 3"></button>
+          </div>
+        </div>
+        <p class="promo-note">These are intentionally built as reusable advert slots — swap the artwork for the real karate, tuition or event posters whenever you have them.</p>
       </div>
     </section>
 
@@ -139,14 +188,16 @@
         <div>
           <span class="eyebrow">Enrolment Form</span>
           <h2>Tell us about your child.</h2>
-          <p>Complete the short form and we will prepare a WhatsApp enquiry for our admin team. You can review it before sending.</p>
+          <p>Complete the short form and send your enquiry directly by email. After submission, you’ll see an on-screen confirmation so you know it went through.</p>
           <div class="info-stack">
             <div><strong>Class days</strong><span>Saturday & Sunday</span></div>
             <div><strong>Time</strong><span>11:00 AM – 1:00 PM</span></div>
             <div><strong>Location</strong><span>YMC Building, 49 Stoney Lane, Birmingham B25 8RE</span></div>
           </div>
         </div>
-        <form id="enrolForm" class="form-card">
+        <form id="enrolForm" class="form-card" name="taqwa-enrolment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="taqwa-enrolment">
+          <p class="honeypot"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
           <div class="field-row">
             <label>Parent / Guardian Name<input required name="parent" type="text" autocomplete="name"></label>
             <label>Phone Number<input required name="phone" type="tel" autocomplete="tel"></label>
@@ -186,7 +237,15 @@
           </div>
           <label>Anything we should know?<textarea name="message" rows="4" placeholder="Optional"></textarea></label>
           <button class="btn full" type="submit">Send Enrolment Enquiry</button>
-          <p class="form-note">This opens WhatsApp and does not store your information on this website.</p>
+          <p class="form-note">Your enquiry is sent securely through the website’s email form service. We do not use WhatsApp for enrolment submissions.</p>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+            <strong>JazakAllahu khayran — your enquiry has been sent.</strong>
+            <span>The Taqwa Education team can now review your details and get back to you.</span>
+          </div>
+          <div class="form-error" id="formError" role="alert" hidden>
+            <strong>We couldn’t send that just now.</strong>
+            <span>Please try again, or call 07846 252413.</span>
+          </div>
         </form>
       </div>
     </section>
