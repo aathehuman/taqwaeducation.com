@@ -156,11 +156,14 @@
       try {
         const formData = new FormData(form);
         const body = new URLSearchParams(formData).toString();
-        const res = await fetch('/', {
+        
+        // Post to the current page URL (Netlify requirement for AJAX forms)
+        const res = await fetch(window.location.href, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: body,
         });
+        
         if (!res.ok) throw new Error('Bad response');
 
         // Success
