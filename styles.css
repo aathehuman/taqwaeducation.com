@@ -750,11 +750,6 @@ p + p { margin-top: 1rem; }
   flex-direction: column;
   height: 100%;
 }
-.service-card:hover {
-  border-color: var(--green);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
 .service-card .stage {
   font-size: 0.78rem;
   font-weight: 600;
@@ -818,7 +813,6 @@ p + p { margin-top: 1rem; }
   color: var(--text);
   transition: border-color 0.2s ease;
 }
-.card-dark:hover { border-color: var(--green); }
 .card-dark h3 { color: var(--text); margin-bottom: 0.75rem; }
 .card-dark p { color: var(--text-secondary); font-size: 0.95rem; }
 
@@ -840,11 +834,6 @@ p + p { margin-top: 1rem; }
   font-weight: 500;
   color: var(--text);
   transition: all 0.2s ease;
-}
-.subject-chip:hover {
-  border-color: var(--green);
-  color: var(--green-bright);
-  background: rgba(46, 204, 113, 0.08);
 }
 
 /* ---------- Split layouts ---------- */
