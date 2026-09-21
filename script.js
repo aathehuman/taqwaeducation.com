@@ -1,13 +1,38 @@
 /* =========================================================
    Taqwa Education — site interactions
+   - Config injection
    - Mobile navigation
-   - Active nav state
-   - Programme slider (autoplay, controls, dots, swipe, keyboard)
-   - Netlify form submission (AJAX) with inline status
+   - Programme slider
+   - Netlify form submission
    ========================================================= */
 
 (function () {
   'use strict';
+
+  /* ---------- Site Configuration Injection ---------- */
+  if (typeof SITE_CONFIG !== 'undefined') {
+    // Inject text content
+    document.querySelectorAll('[data-cfg]').forEach(el => {
+      const key = el.getAttribute('data-cfg');
+      if (SITE_CONFIG[key] !== undefined) {
+        el.textContent = SITE_CONFIG[key];
+      }
+    });
+    // Inject phone links
+    document.querySelectorAll('[data-cfg-phone]').forEach(el => {
+      const key = el.getAttribute('data-cfg-phone');
+      if (SITE_CONFIG[key] !== undefined) {
+        el.href = 'tel:' + SITE_CONFIG[key];
+      }
+    });
+    // Inject standard links (like Google Maps)
+    document.querySelectorAll('[data-cfg-href]').forEach(el => {
+      const key = el.getAttribute('data-cfg-href');
+      if (SITE_CONFIG[key] !== undefined) {
+        el.href = SITE_CONFIG[key];
+      }
+    });
+  }
 
   /* ---------- Mobile nav ---------- */
   const hamburger = document.querySelector('.hamburger');
@@ -20,7 +45,6 @@
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close on link click
     mobileNav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
@@ -29,7 +53,6 @@
       });
     });
 
-    // Close on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
         mobileNav.classList.remove('open');
@@ -53,7 +76,6 @@
     const AUTOPLAY_MS = 6500;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Build dots
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.type = 'button';
@@ -85,13 +107,11 @@
     prevBtn && prevBtn.addEventListener('click', prev);
     nextBtn && nextBtn.addEventListener('click', next);
 
-    // Keyboard
     slider.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
       if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
     });
 
-    // Touch swipe
     let startX = 0, startY = 0, tracking = false;
     track.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
@@ -108,7 +128,6 @@
       }
     });
 
-    // Autoplay
     function startAutoplay() {
       if (reduceMotion) return;
       stopAutoplay();
@@ -129,7 +148,6 @@
       else startAutoplay();
     });
 
-    // Init
     slides.forEach((s, si) => s.setAttribute('aria-hidden', si === 0 ? 'false' : 'true'));
     startAutoplay();
   }
@@ -157,7 +175,6 @@
         const formData = new FormData(form);
         const body = new URLSearchParams(formData).toString();
         
-        // Post to the current page URL (Netlify requirement for AJAX forms)
         const res = await fetch(window.location.href, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -166,7 +183,6 @@
         
         if (!res.ok) throw new Error('Bad response');
 
-        // Success
         form.style.display = 'none';
         if (statusBox) {
           statusBox.className = 'form-status success';
@@ -182,7 +198,7 @@
           statusBox.setAttribute('role', 'alert');
           statusBox.innerHTML =
             '<h3>We couldn\'t send that just now.</h3>' +
-            '<p>Please try again, or call <a href="tel:07846252413">07846 252413</a>.</p>';
+            '<p>Please try again, or call <a href="tel:' + (SITE_CONFIG ? SITE_CONFIG.phoneAdminRaw : '') + '">' + (SITE_CONFIG ? SITE_CONFIG.phoneAdmin : '') + '</a>.</p>';
         }
         if (submitBtn) {
           submitBtn.disabled = false;
