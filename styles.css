@@ -22,6 +22,7 @@
   --text: #E8E8E8;
   --text-secondary: #A0A8B0;
   --text-muted: #6B7280;
+  --highlight: #2ECC7180;
   
   /* Borders */
   --border: #2A3548;
@@ -74,8 +75,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ul { list-style: none; }
 
 ::selection {
-  background: var(--green);
-  color: var(--navy);
+  background: var(--highlight);
 }
 
 input[type="checkbox"], input[type="radio"] {
