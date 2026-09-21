@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrolment &amp; Enquiry | Taqwa Education Birmingham</title>
   <meta name="description" content="Start your enrolment or send an enquiry to Taqwa Education. Tell us about your child and our team will get back to you. Weekend tuition at the YMC Building, Birmingham.">
-  <link rel="canonical" href="https://taqwaeducation.co.uk/enrolment.html">
+  <link rel="canonical" href="https://taqwaeducation.com/enrolment.html">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Enrolment &amp; Enquiry | Taqwa Education">
   <meta property="og:description" content="Submit an enrolment enquiry for weekend tuition at Taqwa Education, Birmingham.">
-  <meta property="og:url" content="https://taqwaeducation.co.uk/enrolment.html">
-  <meta property="og:image" content="https://taqwaeducation.co.uk/assets/taqwa-education-logo.jpg">
+  <meta property="og:url" content="https://taqwaeducation.com/enrolment.html">
+  <meta property="og:image" content="https://taqwaeducation.com/assets/taqwa-education-logo.jpg">
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -37,9 +37,9 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav-cta">
-        <a href="tel:07846252413" class="nav-phone" aria-label="Call 07846 252413">
+        <a href="#" data-cfg-phone="phoneAdminRaw" class="nav-phone" aria-label="Call Taqwa Education">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          07846 252413
+          <span data-cfg="phoneAdmin"></span>
         </a>
         <a href="enrolment.html" class="btn btn-primary">Enrol Now</a>
       </div>
@@ -58,9 +58,9 @@
     <a href="contact.html">Contact</a>
     <a href="enrolment.html" class="btn btn-primary btn-block">Enrol Now</a>
     <div class="mobile-contact">
-      <a href="tel:07846252413">
+      <a href="#" data-cfg-phone="phoneAdminRaw">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        07846 252413
+        <span data-cfg="phoneAdmin"></span>
       </a>
     </div>
   </div>
@@ -83,17 +83,9 @@
 
         <div class="form-card">
 
-          <form
-            name="taqwa-enrolment"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            aria-label="Enrolment enquiry form">
-
-            <!-- Netlify hidden fields -->
+          <form name="taqwa-enrolment" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Enrolment enquiry form">
             <input type="hidden" name="form-name" value="taqwa-enrolment">
 
-            <!-- Honeypot -->
             <div class="bot-field" aria-hidden="true">
               <label>Don't fill this out if you're human: <input name="bot-field"></label>
             </div>
@@ -155,7 +147,7 @@
 
             <div class="form-row form-row-1">
               <fieldset class="form-field" style="border:none; padding:0;">
-                <legend style="font-size:0.88rem; font-weight:600; color:var(--text-dark); margin-bottom:0.45rem;">
+                <legend style="font-size:0.88rem; font-weight:600; color:var(--text); margin-bottom:0.45rem;">
                   Preferred Attendance <span class="req" aria-hidden="true">*</span>
                 </legend>
                 <div class="radio-group" role="radiogroup" aria-label="Preferred attendance">
@@ -173,7 +165,7 @@
 
             <div class="form-row form-row-1">
               <fieldset class="form-field" style="border:none; padding:0;">
-                <legend style="font-size:0.88rem; font-weight:600; color:var(--text-dark); margin-bottom:0.45rem;">
+                <legend style="font-size:0.88rem; font-weight:600; color:var(--text); margin-bottom:0.45rem;">
                   Preferred Day <span class="req" aria-hidden="true">*</span>
                 </legend>
                 <div class="radio-group" role="radiogroup" aria-label="Preferred day">
@@ -215,20 +207,18 @@
 
           </form>
 
-          <!-- Status messages -->
           <div id="form-status" class="form-status" aria-live="polite"></div>
 
-          <!-- Alternative contact -->
           <div class="form-alt">
             <p>Prefer to speak with us first? Call the team directly.</p>
             <div class="phones">
-              <a href="tel:07846252413">
+              <a href="#" data-cfg-phone="phoneAdminRaw">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                07846 252413 — Admin
+                <span data-cfg="phoneAdmin"></span> — Admin
               </a>
-              <a href="tel:07727082205">
+              <a href="#" data-cfg-phone="phoneCurriculumRaw">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                07727 082205 — Curriculum
+                <span data-cfg="phoneCurriculum"></span> — Curriculum
               </a>
             </div>
           </div>
@@ -245,7 +235,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/taqwa-education-logo.jpg" alt="Taqwa Education">
-          <p class="tagline">Learn | Grow | Succeed</p>
+          <p class="tagline" data-cfg="tagline"></p>
           <p>Birmingham-based tuition centre operating from the Yardley Muslim Centre (YMC) Building.</p>
         </div>
         <div class="footer-col">
@@ -261,31 +251,21 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="tel:07846252413" class="phone-link">07846 252413</a> — Admin</li>
-            <li><a href="tel:07727082205" class="phone-link">07727 082205</a> — Curriculum</li>
-            <li>YMC Building</li>
-            <li>49 Stoney Lane, Birmingham B25 8RE</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Class Times</h4>
-          <ul>
-            <li>Saturday &amp; Sunday</li>
-            <li>11:00 AM – 1:00 PM</li>
-            <li>£20 per 2-hour session</li>
-            <li>£75 / month (1 day)</li>
-            <li>£150 / month (2 days)</li>
+            <li><a href="#" data-cfg-phone="phoneAdminRaw" class="phone-link"><span data-cfg="phoneAdmin"></span></a> — Admin</li>
+            <li><a href="#" data-cfg-phone="phoneCurriculumRaw" class="phone-link"><span data-cfg="phoneCurriculum"></span></a> — Curriculum</li>
+            <li><span data-cfg="addressLine1"></span></li>
+            <li><span data-cfg="addressLine2"></span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year">2024</span> Taqwa Education. Operating from the YMC Building, Birmingham.</p>
-        <p>Learn | Grow | Succeed</p>
+        <p>© <span data-cfg="year"></span> Taqwa Education. Operating from the YMC Building, Birmingham.</p>
+        <p data-cfg="tagline"></p>
       </div>
     </div>
   </footer>
 
+  <script src="site-config.js"></script>
   <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
