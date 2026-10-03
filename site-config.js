@@ -1,11 +1,27 @@
 /* =========================================================
    Taqwa Education — Central Configuration
    Edit these values to update them across the entire website.
+   Nav links, phone numbers, prices, times — all live here.
    ========================================================= */
 
 const SITE_CONFIG = {
-  // Year for footer copyright
+  // Brand
   year: "2026",
+  tagline: "Learn, Grow, Succeed.",
+  logoUrl: "/assets/images/logo.png",          // ← swap to your real logo path
+  ogImage: "/assets/images/hero-thumb.webp",   // used for social share previews
+  enrolCta: "Enrol Now",                        // header button label
+
+  // ---- Navigation ----
+  // key must match the page: index | about | services | activities | enrolment | contact
+  navItems: [
+    { href: "/",              label: "Home",       key: "index" },
+    { href: "/about",         label: "About",      key: "about" },
+    { href: "/services",      label: "Tuition",    key: "services" },
+    { href: "/activities/",   label: "Activities", key: "activities" },
+    { href: "/enrolment",     label: "Enrolment",  key: "enrolment" },
+    { href: "/contact",       label: "Contact",    key: "contact" }
+  ],
 
   // Admin & Enrolment Contact
   phoneAdmin: "07846 252413",
@@ -19,7 +35,7 @@ const SITE_CONFIG = {
 
   // Location
   addressLine1: "Yardley Muslim Centre",
-  addressLine2: "47-51 Stoney Lane, Yardley, Birmingham, B25 8RE",
+  addressLine2: "49 Stoney Lane, Yardley, Birmingham, B25 8RE",
   mapsUrl: "https://maps.app.goo.gl/jprFqVsDVnbxW3GH8",
 
   // Tuition Class Times
@@ -46,8 +62,5 @@ const SITE_CONFIG = {
 
   // Yardley Muslim Centre
   ymcWebsite: "https://ymc1.uk",
-  ymcWebsiteLabel: "ymc1.uk",
-
-  // Brand
-  tagline: "Learn, Grow, Succeed."
+  ymcWebsiteLabel: "ymc1.uk"
 };
