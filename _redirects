@@ -1,0 +1,17 @@
+# =========================================================
+# Taqwa Education — Netlify redirects
+# =========================================================
+
+# --- Old .html links → clean URLs (avoids duplicate pages) ---
+/index.html      /                    301
+/about.html      /about               301
+/services.html   /services            301
+/enrolment.html  /enrolment           301
+/contact.html    /contact             301
+
+# --- Old "Tuition" links ---
+/tuition         /services            301
+/tuition/        /services            301
+
+# --- Short link for posters / WhatsApp ---
+/karate          /activities/karate   301
