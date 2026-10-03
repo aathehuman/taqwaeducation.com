@@ -41,7 +41,7 @@
   function renderSharedLayout() {
     const page = getPageKey();
     const items = cfg.navItems && cfg.navItems.length ? cfg.navItems : DEFAULT_NAV;
-    const logo = cfg.logoUrl || "/assets/images/logo.png";
+    const logo = cfg.logoUrl || "/assets/favicon.png";
     const enrolHref = "/enrolment";
     const enrolLabel = cfg.enrolCta || "Enrol Now";
 
