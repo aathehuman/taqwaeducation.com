@@ -8,8 +8,8 @@ const SITE_CONFIG = {
   // Brand
   year: "2026",
   tagline: "Learn, Grow, Succeed.",
-  logoUrl: "/assets/images/logo.png",          // ← swap to your real logo path
-  ogImage: "/assets/images/hero-thumb.webp",   // used for social share previews
+  logoUrl: "/assets/taqwa-education-logo.png",  // ← swap to your real logo path
+  ogImage: "/assets/taqwa-education-logo.png",  // used for social share previews
   enrolCta: "Enrol Now",                        // header button label
 
   // ---- Navigation ----
