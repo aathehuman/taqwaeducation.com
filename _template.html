@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- ==========================================================
+       HOW TO USE THIS TEMPLATE
+       1. Copy this file, rename it (e.g. holiday-club.html), and
+          place it in the right folder (root, or /activities/ for
+          activity pages).
+       2. Work top to bottom — replace every [PLACEHOLDER].
+       3. Delete any <section> you don't need. Only the page hero
+          and CTA band are required.
+       4. Update <title>, meta description and canonical URL.
+       5. Keep the header, mobile nav and footer EXACTLY as they
+          are — identical on every page of the site.
+       6. Set class="active" on the current page's link in BOTH
+          the desktop nav and mobile nav.
+       7. Never hardcode phone numbers, prices, times or the
+          address — use data-cfg attributes so site-config.js
+          stays the single source of truth:
+            <span data-cfg="phoneAdmin">07846 252413</span>
+            <a data-cfg-phone="phoneAdminRaw" href="tel:07846252413">
+            <a data-cfg-href="mapsUrl" href="...">
+          New values: add the key to site-config.js, then use it.
+       8. Scripts must load in this order at the end of <body>:
+            /site-config.js  then  /script.js
+       ========================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Page Name] | Taqwa Education</title>
+  <meta name="description" content="[One–two sentence description, 150–160 characters.]">
+  <link rel="canonical" href="https://taqwaeducation.com/[page-url]">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER (keep identical site-wide) ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Taqwa Education — Home">
+      <img src="/assets/images/logo.png" alt="Taqwa Education logo">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Tuition</a>
+      <a href="/activities/">Activities</a><!-- ← set class="active" here if this is an activities page -->
+      <a href="/enrolment">Enrolment</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:07846252413" data-cfg-phone="phoneAdminRaw">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-cfg="phoneAdmin">07846 252413</span>
+      </a>
+      <a class="btn btn-primary" href="/enrolment">Enrol Now</a>
+      <button class="hamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle menu">
+        <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/services">Tuition</a>
+  <a href="/activities/">Activities</a>
+  <a href="/enrolment">Enrolment</a>
+  <a href="/contact">Contact</a>
+  <a class="btn btn-primary btn-block" href="/enrolment">Enrol Now</a>
+  <div class="mobile-contact">
+    <a href="tel:07846252413" data-cfg-phone="phoneAdminRaw">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span data-cfg="phoneAdmin">07846 252413</span>
+    </a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- PAGE HERO — required -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-green">[Small label, e.g. YMC Activity]</p>
+      <h1>[Main headline — short, friendly, end with a full stop]</h1>
+      <p class="lead">[One or two sentences introducing the page.]</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="tel:07846252413" data-cfg-phone="phoneAdminRaw">[Primary CTA, e.g. Call to Book]</a>
+        <a class="btn btn-outline btn-lg" href="#[section-id]">[Secondary CTA, e.g. View Times]</a>
+      </div>
+      <!-- Optional trust points -->
+      <div class="hero-points">
+        <div class="hero-point">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>[Key point one]</span>
+        </div>
+        <div class="hero-point">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>[Key point two]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS GRID — optional. Good for programmes, services, options. -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">[Section label]</p>
+        <h2>[Section heading.]</h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="service-card" href="[link]">
+          <p class="stage">[Card tag]</p>
+          <h3>[Card title]</h3>
+          <p>[One–two sentence description.]</p>
+          <span class="link-arrow">Find out more →</span>
+        </a>
+        <div class="service-card"><!-- use <div> if the card isn't a link -->
+          <p class="stage">[Card tag]</p>
+          <h3>[Card title]</h3>
+          <p>[One–two sentence description.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEXT + AT-A-GLANCE — optional. Good for class/page details. -->
+  <section class="section section-dark-2">
+    <div class="container split">
+      <div>
+        <div class="section-head">
+          <p class="eyebrow">[Section label]</p>
+          <h2>[Section heading.]</h2>
+        </div>
+        <p class="text-secondary">[Paragraph text — warm and short.]</p>
+        <ul class="list-check mt-2">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>[Key point one]</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>[Key point two]</span>
+          </li>
+        </ul>
+      </div>
+      <aside class="info-card">
+        <h4>At a Glance</h4>
+        <ul class="info-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Where</strong> <span data-cfg="addressLine1">Yardley Muslim Centre</span>, <span data-cfg="addressLine2">49 Stoney Lane, Yardley, Birmingham, B25 8RE</span></span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>When</strong> [Day and time]</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Cost</strong> [Price]</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CALLOUT WITH 4-UP GRID — optional. Good for spotlights and instructors. -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-callout">
+        <p class="eyebrow">[Section label]</p>
+        <h2>[Callout heading.]</h2>
+        <p>[Supporting paragraph.]</p>
+        <div class="feature-grid">
+          <div><h4>[Item one]</h4><p>[Short detail.]</p></div>
+          <div><h4>[Item two]</h4><p>[Short detail.]</p></div>
+          <div><h4>[Item three]</h4><p>[Short detail.]</p></div>
+          <div><h4>[Item four]</h4><p>[Short detail.]</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE — optional. Store images in /assets/images/ and always add alt text. -->
+  <!--
+  <section class="section-sm">
+    <div class="container">
+      <img src="/assets/images/[image].webp" alt="[Describe the photo]" loading="lazy" style="border-radius:16px;border:1px solid var(--border);">
+    </div>
+  </section>
+  -->
+
+  <!-- CTA BAND — required -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>[Closing call to action, e.g. Ready to get started?]</h2>
+      <p>[One sentence — speak with our team or start your enquiry today.]</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="tel:07846252413" data-cfg-phone="phoneAdminRaw">Call <span data-cfg="phoneAdmin">07846 252413</span></a>
+        <a class="btn btn-outline btn-lg" href="/contact">Contact the Team</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (keep identical site-wide) ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="Taqwa Education logo">
+        <p class="tagline" data-cfg="tagline">Learn, Grow, Succeed.</p>
+        <p>Birmingham-based tuition centre operating from the Yardley Muslim Centre (YMC) Building.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Tuition</a></li>
+          <li><a href="/activities/">Activities</a></li>
+          <li><a href="/enrolment">Enrolment</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a class="phone-link" href="tel:07846252413" data-cfg-phone="phoneAdminRaw"><span data-cfg="phoneAdmin">07846 252413</span> — Admin</a></li>
+          <li><a class="phone-link" href="tel:07727082205" data-cfg-phone="phoneCurriculumRaw"><span data-cfg="phoneCurriculum">07727 082205</span> — Curriculum</a></li>
+          <li><span data-cfg="addressLine1">Yardley Muslim Centre</span></li>
+          <li><span data-cfg="addressLine2">49 Stoney Lane, Yardley, Birmingham, B25 8RE</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-cfg="year">2026</span> Taqwa Education. Operating from the YMC Building, Birmingham.</p>
+      <p data-cfg="tagline">Learn, Grow, Succeed.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/site-config.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
