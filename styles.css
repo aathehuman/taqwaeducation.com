@@ -616,7 +616,7 @@ p + p { margin-top: 1rem; }
 .slide {
   flex: 0 0 100%;
   position: relative;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, var(--card-2), var(--navy));
   overflow: hidden;
 }
@@ -719,7 +719,7 @@ p + p { margin-top: 1rem; }
 .slider-dot.active:hover { background: var(--green); }
 
 @media (max-width: 768px) {
-  .slide { aspect-ratio: 16 / 9; }
+  .slide { aspect-ratio: 4 / 3; }
   .slide-content { padding: 1.5rem 1.5rem; }
   .slider-dots { right: 1.5rem; bottom: 1rem; }
   .slider-nav { width: 38px; height: 38px; }
